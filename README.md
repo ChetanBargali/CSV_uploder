@@ -18,7 +18,7 @@ Once you have the application up and running, you can start using it by followin
 
 ## Folder Structure
 ```
-CSV-Uploader
+## CSV-Uploader
     Habit Tracker                              |--> forget_password.css            
     |                                          |--> header.css
     |               |--->css------------------>|--> home.css
