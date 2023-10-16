@@ -2,11 +2,7 @@
 
 # CSV-Uploader
 
-This web application which help you to Upload, Delete and Show CSV file . 
-It is user specific app, which mean a user can track their habit, and mark it as done , or not done. 
-The project is built using a tech stack consisting of Node.js for the server-side scripting.
-Express for handling HTTP requests and routing.
-MongoDB for storing and managing the data and EJS for rendering the views and templates.
+CSV_Upload is a user-friendly web application designed for uploading and parsing CSV files. Developed using Node.js and Express, it offers a straightforward interface to facilitate seamless management of CSV data.
 
 
 ## Usage
@@ -18,39 +14,28 @@ Once you have the application up and running, you can start using it by followin
 
 ## Folder Structure
 ```
-## CSV-Uploader
-    Habit Tracker                              |--> forget_password.css            
+    CSV_uploader                               |--> file_viewer.css            
     |                                          |--> header.css
     |               |--->css------------------>|--> home.css
-    |--->assets---->|--->img                   |--> userSignIn.css
-    |               |---> js-->home.js         |--> userSignUp.css
-    |
-    |               |--->flash_middleware.js
+    |--->Assets---->|---> js-->file_viewer.js                   
+    |                      
     |--->config---->|--->mongoose.js
-    |               |--->passport_local_strategy.js
-    |
-    |                  |-->habit_controller.js
+    |          
+    |                  |-->file_controller.js
     |--->controllers-->|-->home_controller.js
-    |                  |-->users_controller.js
-    |
-    |               |-->habit.js
-    |--->models---->|
-    |               |-->user.js
-    |
+    |                  
+    |               
+    |--->models---->|-->csv.js
+    |                      
     |              
-    |               |-->habit.js
     |--->routes---->|-->index.js
-    |               |-->users.js
+    |               
     |
-    |              
-    |              |--->_header.ejs
-    |              |--->daily_view.ejs
-    |              |--->forget_password.ejs
+    |--->uploads--->files            
+    |             
+    |              |--->file_viewer.ejs
     |--->views---->|--->home.ejs
     |              |--->layout.ejs
-    |              |--->user-sign-in.ejs
-    |              |--->user-sign-up.ejs
-    |              |--->weekly_view.ejs
     |
     |-->node_modules
     |-->.gitignore
@@ -66,7 +51,7 @@ To run this application on your local machine, please follow these steps:
 
 Clone this repository using the following command:
 ```
-$ git clone https://github.com/ChetanBargali/Habit_Tracker
+$ git clone https://github.com/ChetanBargali/CSV_uploder
 ```
 Install the required dependencies using the following command:
 ```
