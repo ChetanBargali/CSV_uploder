@@ -1,19 +1,25 @@
-const mongoose=require('mongoose');
+// IMPORTING PACKAGE
+const mongoose = require("mongoose");
 require('dotenv').config()
-//connect database
-mongoose.connect(process.env.MONGO_URL);
 
-//acquire the connection(to check if it is sucessful)
-const db=mongoose.connection;
+// MAKING CONNECTION 
 
+// mongoose.connect('mongodb://127.0.0.1:27017/csvUploads');
+const DB = process.env.MONGO_URL;
 
-//error
-db.on('error',console.error.bind(console,"Error connecting to mongoDB"));
+mongoose.connect(DB).then(()=>{
+    console.log('Connection successful!');
+}).catch((err) => console.log("no connection " + err));
 
+//setting it to db
+const db = mongoose.connection;
 
-//if succesfull and running the print the massege 
-db.once('open', function(){
-    console.log('Connected to Database :: MongoDB');
+// CHECKING CONNECTION
+//if error occurs
+db.on("error", console.error.bind(console, "Error connecting to DB"));
+// when db connects successfully
+db.once("open", function(){
+    console.log("Successfully connected to DB");
 });
 
-module.exports=db;
+module.exports = db;

@@ -3,7 +3,7 @@ const express = require('express');
 const port = 8080;
 const app = express();
 const path = require('path');
-require('dotenv').config();
+require('dotenv').config()
 
 const expressLayouts = require('express-ejs-layouts');
 const csv = require('csv-parser');
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({extended: true}));
 
 //accesing static files from assets folder
-app.use(express.static('./Assets'));    
+app.use(express.static('./assets'));    
 
 //setting up view engine
 app.set("view engine", "ejs");
